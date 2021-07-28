@@ -84,5 +84,5 @@ jobs:
           key: ${{ runner.os }}-sbt-no-precompiled-sources-${{ hashFiles('**/build.sbt') }}
 
       - name: Execute all tests
-        run: sbt test
+        run: sbt --debut test
         working-directory: gobra
