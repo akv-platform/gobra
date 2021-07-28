@@ -68,6 +68,7 @@ lazy val gobra = (project in file("."))
     //  be created.
     inConfig(Test)(baseAssemblySettings),
     Test / javaOptions ++= (run / javaOptions).value,
+    Test / javaOptions += "-Xmx2G"
     Test / assembly / assemblyJarName := "gobra-test.jar",
     Test / assembly / test := {},
     // exclude .gobra test files as we currently do not fully support files stored inside a JAR file:
